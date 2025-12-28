@@ -6,3 +6,5 @@ sources:
       enabled: true
     tables:
       - name: ORDERS  # enabled
+      - name: BIKE_RIDES
+      - name: WEATHER

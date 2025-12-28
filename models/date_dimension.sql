@@ -1,0 +1,16 @@
+WITH CTE AS(
+SELECT 
+to_timestamp(started_at) as started_at,
+date(to_timestamp(started_at)) as date_started_at,
+hour(to_timestamp(started_at)) as hour_started_at,
+
+{{day_type('started_at')}} as day_type,
+
+{{get_season('started_at')}} as Station_of_year
+
+FROM
+{{source("RAW",'BIKE_RIDES')}}
+
+)
+
+SELECT * FROM CTE
