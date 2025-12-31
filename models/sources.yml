@@ -1,0 +1,10 @@
+sources:
+  - name: RAW
+    database: MY_DBTPRACTICE
+    schema: RAW
+    config:
+      enabled: true
+    tables:
+      - name: ORDERS  # enabled
+      - name: BIKE_RIDES
+      - name: WEATHER
