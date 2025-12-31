@@ -10,7 +10,7 @@ with trips as(
     MEMBER_CASUAL,
     timestampdiff(second,to_timestamp(STARTED_AT),to_timestamp(ENDED_AT)) as trip_duration_seconds
         FROM
-{{source("RAW",'BIKE_RIDES')}}
+{{ref("stg_bike")}}
 )
 
 select * from trips

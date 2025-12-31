@@ -7,7 +7,7 @@ with station as(
     START_LNG as station_lng
 
     FROM
-{{source("RAW",'BIKE_RIDES')}}
+{{ref("stg_bike")}}
 )
 
 select * from station
